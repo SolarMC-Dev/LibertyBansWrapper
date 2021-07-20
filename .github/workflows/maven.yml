@@ -24,7 +24,7 @@ jobs:
       run: mvn clean -B -U verify
   deploy:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/solar'
+    if: github.ref == 'refs/heads/master'
     needs: build
     steps:
     - uses: actions/checkout@v2
